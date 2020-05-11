@@ -1,0 +1,59 @@
+@import "common.css";
+
+@mixin width_total($wid:100%){
+    width:$wid;
+}
+@mixin display($f:flex,$j:space-between){
+    display:$f;
+    justify-content:$j;
+}
+$color:#000;
+// layout
+#total{
+    @include width_total(100vw);
+}
+// header
+header{
+    @include width_total(100%);
+    @include display;
+    position:fixed;
+}
+header figure{
+    @include width_total(100%);
+}
+header img{
+    @include width_total(20%);
+    height:100%;
+}
+header nav{
+    @include width_total(40%);
+    padding:2% 5%;
+    font-size:2em;
+}
+header nav ul{
+    @include width_total(100%);
+    @include display;
+
+    & li{
+        color:#fff;
+    }
+}
+/* header{
+    @include width_total(100%);
+    @extend section;
+}*/
+section{
+    @include width_total(100%);
+}
+footer{
+    @include width_total(100%);
+    background-color:$color;
+    & ul{
+        @include display;
+        padding:2% 15%;
+    }
+    & ul li{
+        color:#fff;
+    }
+}
+
