@@ -7,6 +7,12 @@
     display:$f;
     justify-content:$j;
 }
+%aaa{
+    color:#fff;
+}
+%absol{
+    position:absolute;
+}
 $color:#000;
 // layout
 #total{
@@ -17,6 +23,8 @@ header{
     @include width_total(100%);
     @include display;
     position:fixed;
+    @extend %aaa;       
+   
 }
 header figure{
     @include width_total(100%);
@@ -38,19 +46,41 @@ header nav ul{
         color:#fff;
     }
 }
+section{
+    @include width_total(100%);
+    @extend %aaa; 
+    background: url("../img/index/index.jpg") no-repeat;
+    background-size:cover;
+    height:100vh;
+        .Text{
+            @include width_total(65%);
+            position:relative;
+            left:0%;
+            top:0%;
+            .first{
+                @extend %absol;
+                left:35%;
+                top:35%;
+            }
+            .second{
+                @extend %absol;
+                left:85%;
+                top:85%;
+            }
+        }
+}
 /* header{
     @include width_total(100%);
     @extend section;
 }*/
-section{
-    @include width_total(100%);
-}
+
 footer{
     @include width_total(100%);
     background-color:$color;
     & ul{
         @include display;
         padding:2% 15%;
+        margin:0 auto;
     }
     & ul li{
         color:#fff;
