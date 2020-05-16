@@ -43,12 +43,6 @@ section {
     position: relative;
     left: 0%;
     top: 0%; }
-    section .Text .first {
-      left: 35%;
-      top: 35%; }
-    section .Text .second {
-      left: 85%;
-      top: 85%; }
 
 /* header{
     @include width_total(100%);

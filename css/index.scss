@@ -59,13 +59,11 @@ section{
             top:0%;
             .first{
                 @extend %absol;
-                left:35%;
-                top:35%;
+        
             }
             .second{
                 @extend %absol;
-                left:85%;
-                top:85%;
+        
             }
         }
 }
