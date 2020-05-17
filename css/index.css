@@ -1,4 +1,10 @@
 @import url(common.css);
+header, section {
+  color: #fff; }
+
+section .Text .first, section .Text .second {
+  position: absolute; }
+
 #total {
   width: 100vw; }
 
@@ -27,20 +33,29 @@ header nav ul {
   header nav ul li {
     color: #fff; }
 
+section {
+  width: 100%;
+  background: url("../img/index/index.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh; }
+  section .Text {
+    width: 65%;
+    position: relative;
+    left: 0%;
+    top: 0%; }
+
 /* header{
     @include width_total(100%);
     @extend section;
 }*/
-section {
-  width: 100%; }
-
 footer {
   width: 100%;
   background-color: #000; }
   footer ul {
     display: flex;
     justify-content: space-between;
-    padding: 2% 15%; }
+    padding: 2% 15%;
+    margin: 0 auto; }
   footer ul li {
     color: #fff; }
 
