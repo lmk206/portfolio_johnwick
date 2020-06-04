@@ -15,8 +15,12 @@
 }
 $color:#000;
 // layout
+body{
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
 #total{
-    @include width_total(100vw);
+    @include width_total(100%);
 }
 // header
 header{
@@ -24,7 +28,7 @@ header{
     @include display;
     position:fixed;
     @extend %aaa;       
-   
+    z-index:10;
 }
 header figure{
     @include width_total(100%);
@@ -44,6 +48,9 @@ header nav ul{
 
     & li{
         color:#fff;
+        & a{
+            color:#fff;
+        }
     }
 }
 section{
@@ -53,24 +60,24 @@ section{
     background-size:cover;
     height:100vh;
         .Text{
-            @include width_total(65%);
+            @include width_total(100%);
+            height:100%;
             position:relative;
             left:0%;
             top:0%;
             .first{
-                @extend %absol;
-        
+                position:absolute;
+                left:20%;
+                top:30%;
             }
             .second{
-                @extend %absol;
+                position:absolute;
+                left:60%;
+                top:50%;
         
             }
         }
 }
-/* header{
-    @include width_total(100%);
-    @extend section;
-}*/
 
 footer{
     @include width_total(100%);
